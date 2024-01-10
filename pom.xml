@@ -6,7 +6,7 @@
 
     <groupId>br.com.myvirtualhub</groupId>
     <artifactId>omni-parent</artifactId>
-    <version>${omni-version}}</version>
+    <version>${omni-version}</version>
     <packaging>pom</packaging>
 
     <properties>
