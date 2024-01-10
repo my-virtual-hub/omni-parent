@@ -38,7 +38,6 @@
 
     <properties>
         <repo-pkg-github>my-virtual-hub/omni-parent</repo-pkg-github>
-        <omni-version>0.1.0-SNAPSHOT</omni-version>
         <maven.compiler.release>17</maven.compiler.release>
         <sonar.organization>my-virtual-hub</sonar.organization>
         <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
