@@ -9,7 +9,36 @@
     <version>${omni-version}</version>
     <packaging>pom</packaging>
 
+    <name>Omni Communicator</name>
+    <description>Omni Communicator Orchestrator system, supports a variety of communication channels and can be connected to any service provider.</description>
+    <url>https://omni.myvirtualhub.com.br</url>
+
+    <licenses>
+        <license>
+            <name>BSD 2-Clause "Simplified" License</name>
+            <url>https://opensource.org/licenses/BSD-2-Clause</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/${repo-pkg-github}</url>
+        <connection>scm:git:git@github.com:${repo-pkg-github}.git</connection>
+        <developerConnection>scm:git:git@github.com:${repo-pkg-github}.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Marco Quiçula</name>
+            <email>marco.quicula@myvirtualhub.com.br</email>
+            <organization>My Virtual Hub</organization>
+            <organizationUrl>https://www.myvirtualhub.com.br</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
+        <repo-pkg-github>my-virtual-hub/omni-parent</repo-pkg-github>
+        <omni-version>0.1.0-SNAPSHOT</omni-version>
         <maven.compiler.release>17</maven.compiler.release>
         <sonar.organization>my-virtual-hub</sonar.organization>
         <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
@@ -20,8 +49,6 @@
         <com-googlecode-libphonenumber>8.13.12</com-googlecode-libphonenumber>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <repo-pkg-github>my-virtual-hub/omni-domain</repo-pkg-github>
-        <omni-version>0.1.0-SNAPSHOT</omni-version>
     </properties>
 
     <build>
