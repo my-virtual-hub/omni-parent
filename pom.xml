@@ -43,9 +43,11 @@
         <maven-compiler-plugin>3.11.0</maven-compiler-plugin>
         <maven-javadoc-plugin>3.6.3</maven-javadoc-plugin>
         <maven-source-plugin>2.4</maven-source-plugin>
+        <maven-surefire-plugin>3.1.2</maven-surefire-plugin>
         <nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin>
         <maven-gpg-plugin>3.1.0</maven-gpg-plugin>
         <com-googlecode-libphonenumber>8.13.12</com-googlecode-libphonenumber>
+        <jacoco-maven-plugin>0.8.11</jacoco-maven-plugin>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -75,6 +77,11 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin}</version>
                 <executions>
@@ -82,6 +89,25 @@
                         <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
