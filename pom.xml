@@ -56,6 +56,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>alternative-repo-public</id>
+            <name>My Virtual Hub Maven Public Packages</name>
+            <url>https://nexus.myvirtualhub.com.br/repository/myvirtualhub-public/</url>
+        </repository>
+    </repositories>
+    
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -194,12 +202,12 @@
                 <repository>
                     <id>alternative-repo-release</id>
                     <name>My Virtual Hub Maven Release Packages</name>
-                    <url>https://repository.myvirtualhub.com.br/repository/myvirtualhub-releases/</url>
+                    <url>https://nexus.myvirtualhub.com.br/repository/myvirtualhub-releases/</url>
                 </repository>
                 <snapshotRepository>
                     <id>alternative-repo-snapshot</id>
                     <name>My Virtual Hub Maven Snapshot Packages</name>
-                    <url>https://repository.myvirtualhub.com.br/repository/myvirtualhub-snapshots/</url>
+                    <url>https://nexus.myvirtualhub.com.br/repository/myvirtualhub-snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
             <build>
