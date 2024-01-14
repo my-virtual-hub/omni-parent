@@ -46,7 +46,6 @@
         <maven-surefire-plugin>3.1.2</maven-surefire-plugin>
         <nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin>
         <maven-gpg-plugin>3.1.0</maven-gpg-plugin>
-        <com-googlecode-libphonenumber>8.13.12</com-googlecode-libphonenumber>
         <jacoco-maven-plugin>0.8.11</jacoco-maven-plugin>
         <junit-jupiter-api>5.10.0</junit-jupiter-api>
         <junit-jupiter-engine>5.10.0</junit-jupiter-engine>
