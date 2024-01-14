@@ -9,8 +9,8 @@
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Omni Communicator</name>
-    <description>Omni Communicator Orchestrator system, supports a variety of communication channels and can be connected to any service provider.</description>
+    <name>omni-parent</name>
+    <description>Omni Parent</description>
     <url>https://omni.myvirtualhub.com.br</url>
 
     <licenses>

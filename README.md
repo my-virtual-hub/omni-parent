@@ -31,6 +31,16 @@ This project operates independently and its progression depends on availability 
 | | [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=my-virtual-hub_omni-parent&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=my-virtual-hub_omni-parent) | |
 | | [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=my-virtual-hub_omni-parent&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=my-virtual-hub_omni-parent) | |
 
+## License
+
+This software is governed by the BSD 2-Clause License. This is a free software license with minimal restrictions on redistribution, providing flexibility for both private and commercial use. The BSD license is compatible with many other open source licenses, making it a popular choice for software distribution.
+
+For more information about the BSD 2-Clause License and its terms, please visit the official license link:
+
+[BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)
+
+![Approved License](images/approved-license.png)
+
 ## Contact
 
 ![Marco Quicula](images/marco.png)
