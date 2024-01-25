@@ -49,11 +49,23 @@
         <jacoco-maven-plugin>0.8.11</jacoco-maven-plugin>
         <junit-jupiter-engine>5.10.0</junit-jupiter-engine>
         <mockito-junit-jupiter>5.4.0</mockito-junit-jupiter>
+        <logback-classic-version>1.4.14</logback-classic-version>
+        <slf4j-api-version>2.0.11</slf4j-api-version>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api-version}</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
