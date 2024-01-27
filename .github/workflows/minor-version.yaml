@@ -35,9 +35,8 @@ jobs:
           git config --global user.signingkey "${{ secrets.GIT_CONFIG_USER_SIGNINGKEY }}" 
           git config --global user.email "${{ vars.GIT_CONFIG_USER_EMAIL }}"
           git config --global user.name "${{ vars.GIT_CONFIG_USER_NAME }}"
-      - name: Merge branch
+      - name: Push changes
         run: |
-          git fetch origin
-          git checkout main  # Replace with your target branch
-          git merge --no-ff origin/develop  # Replace with your source branch
-          git push origin main  # Replace with your target branch
+          git add pom.xml
+          git commit -m "Remove SNAPSHOT from POM version"
+          git push
