@@ -1,0 +1,43 @@
+name: Remove SNAPSHOT From POM Version
+on:
+  workflow_dispatch:
+
+jobs:
+  remove-snapshot:
+    name: DEVELOP Remove SNAPSHOT From POM Version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
+      - name: Checkout Develop
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0  # Important for fetching all branches
+          token: ${{ secrets.PAT_REPO_GITHUB_ACTIONS }}
+      - name: Update POM version
+        run: |
+          mvn versions:set -DremoveSnapshot -DgenerateBackupPoms=false
+      - name: Set up Git User to Sign Commit
+        run: |
+          mkdir -p ~/.gnupg/
+          echo "${{ secrets.GPG_SIGN_PRIVATE_KEY }}" > ~/.gnupg/private-key.asc
+          gpg --batch --import ~/.gnupg/private-key.asc
+          git config --global commit.gpgsign "true"
+          git config --global user.signingkey "${{ secrets.GIT_CONFIG_USER_SIGNINGKEY }}" 
+          git config --global user.email "${{ vars.GIT_CONFIG_USER_EMAIL }}"
+          git config --global user.name "${{ vars.GIT_CONFIG_USER_NAME }}"
+      - name: Merge branch
+        run: |
+          git fetch origin
+          git checkout main  # Replace with your target branch
+          git merge --no-ff origin/develop  # Replace with your source branch
+          git push origin main  # Replace with your target branch
